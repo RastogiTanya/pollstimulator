@@ -1,0 +1,17 @@
+body {
+	padding: 20px;
+	font: 20px "Lucida Grande", sans-serif;
+	background-color: beige;
+}
+
+a {
+	color: #f84e4e;
+	text-decoration: none;
+}
+
+h1 {
+	color: rgb(73, 56, 30);
+}
+h2 {
+	color: rgb(102, 69, 133);
+}

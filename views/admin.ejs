@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title><%= title %></title>
+		<link rel="stylesheet" href="/stylesheets/style.css" />
+	</head>
+	<body>
+		<% if(show){ %>
+		<h1 style="color: green">User Added Successfully</h1>
+		<% } %>
+		<form method="POST" action="/add">
+			<h1>Add Candidate</h1>
+			<input
+				required
+				placeholder="Enter Student ID"
+				name="studentId"
+				type="number"
+			/><br />
+			<br />
+			<input
+				required
+				minlength="5"
+				placeholder="Enter Your Name"
+				name="name"
+				type="text"
+			/><br />
+			<br />
+			<button>Submit</button>
+			<a href="/">Back to catalogue</a>
+		</form>
+	</body>
+</html>

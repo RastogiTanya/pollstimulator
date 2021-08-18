@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title><%= title %></title>
+		<link rel="stylesheet" href="/stylesheets/style.css" />
+	</head>
+	<body>
+		<h1>Vote :</h1>
+		<% if(show){ %>
+		<h1 style="color: green"><%=msg%></h1>
+		<% } %>
+		<form method="POST" action="/users/vote">
+			<input
+				required
+				type="number"
+				name="studentId"
+				placeholder="Enter Student ID"
+			/>
+			<br />
+			<% for(var current in list ){ %>
+			<br />
+
+			<%=list[current]%>
+
+			<input
+				type="radio"
+				name="candidateId"
+				value="<%=current%>"
+				id="<%=current%>"
+			/>
+			<label for="<%=current%>"></label>
+			<% } %>
+
+			<br /><br />
+			<button
+				style="
+					border-radius: 3px;
+					background-color: rgb(83, 83, 102);
+					width: 10%;
+					color: aliceblue;
+					height: 30px;
+				"
+			>
+				Vote
+			</button>
+		</form>
+		<br />
+		<br />
+		<a href="/">Back to catalogue</a>
+	</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title><%= title %></title>
+		<link rel="stylesheet" href="/stylesheets/style.css" />
+	</head>
+	<body>
+		<div style="border: 1px solid rgb(235, 20, 20); padding: 2%">
+			<h1>Poll Results</h1>
+
+			<%if(data.length > 0) {%> <%console.log(data)%>
+			<h2>Won:<%=data[0].name%> (<%=data[0].vote%>)</h2>
+			<h2>Lost:<%=data[1].name%> (<%=data[1].vote%>)</h2>
+			<%}else{%>
+			<h2 style="color: rgb(245, 140, 222)">No results yet</h2>
+			<%}%>
+		</div>
+		<br /><br />
+		<div style="border: 1px solid rgb(207, 36, 36); padding: 2%">
+			<h1>Voting Results</h1>
+			<% for(let a=0;a < data.length ; a++){ %>
+
+			<h2><%=data[a].name %> (<%=data[a].vote%>)</h2>
+			<%}%>
+		</div>
+		<br />
+		<a href="/">Back to catalogue</a>
+	</body>
+</html>
